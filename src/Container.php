@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types= 1);
+declare(strict_types=1);
 
 namespace ExpertFramework\Container;
 
@@ -27,7 +27,7 @@ class Container implements ContainerInterface
     public static function get(string $className): object
     {
         if (!isset(self::$instances[$className])) {
-            self::$instances[$className] = new $className();
+            self::$instances[$className] = new $className(new self());
         }
         return self::$instances[$className];
     }
