@@ -3,15 +3,14 @@
 namespace ExpertFramework\Container\Contract;
 
 /**
- * interface ContainerContract
+ * interface ContainerContract.
  *
- * @package ExpertFramework\Container
  * @author jonas-elias
  */
 interface ContainerInterface
 {
     /**
-     * Method to get container
+     * Method to get container.
      *
      * @return object
      */
