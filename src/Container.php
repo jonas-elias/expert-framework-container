@@ -7,20 +7,19 @@ namespace ExpertFramework\Container;
 use ExpertFramework\Container\Contract\ContainerInterface;
 
 /**
- * interface Container
+ * interface Container.
  *
- * @package ExpertFramework\Container
  * @author jonas-elias
  */
 class Container implements ContainerInterface
 {
     /**
-     * @var array $instances
+     * @var array
      */
     public static array $instances = [];
 
     /**
-     * Method to get container
+     * Method to get container.
      *
      * @return object
      */
@@ -29,6 +28,7 @@ class Container implements ContainerInterface
         if (!isset(self::$instances[$className])) {
             self::$instances[$className] = new $className(new self());
         }
+
         return self::$instances[$className];
     }
 }
